@@ -8,6 +8,11 @@ class PostSerializer(serializers.ModelSerializer):
         read_only_fields = ['id', 'created_datetime']
 
     def validate(self, attrs):
-        if self.instance and 'username' in attrs:
-            raise serializers.ValidationError('username field cannot be updated')
+        # During partial update, username cannot be updated
+        if self.instance:
+            if 'username' in attrs:
+                raise serializers.ValidationError({'username': 'This field cannot be updated.'})
+        elif 'username' not in attrs:
+            raise serializers.ValidationError({'username': 'This field is required.'})
+
         return attrs
