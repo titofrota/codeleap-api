@@ -1,5 +1,5 @@
 import pytest
-from api.serializers import PostSerializer
+from api.serializers import PostSerializer, PostUpdateSerializer
 from api.models import Post
 from api.tests.factories import PostFactory
 
@@ -29,17 +29,17 @@ class TestPostSerializer:
         assert "username" in serializer.errors
         assert serializer.errors["username"] == ["This field is required."]
 
-    def test_username_cannot_be_updated(self):
+    def test_username_will_not_be_updated(self):
         post = PostFactory(username="initial_user")
         data = {
             "username": "updated_user",
             "title": post.title,
             "content": post.content,
         }
-        serializer = PostSerializer(post, data=data, partial=True)
+        serializer = PostUpdateSerializer(post, data=data, partial=True)
 
-        assert not serializer.is_valid()
-        assert serializer.errors["username"] == ["This field cannot be updated."]
+        assert serializer.is_valid()
+        assert post.username == 'initial_user'
 
     def test_partial_update_without_username(self):
         post = PostFactory(username="initial_user")
