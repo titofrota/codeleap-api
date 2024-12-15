@@ -1,6 +1,6 @@
 import factory
 from api.models import Post
-from faker import Faker
+
 
 class PostFactory(factory.django.DjangoModelFactory):
     class Meta:

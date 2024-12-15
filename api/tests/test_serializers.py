@@ -1,7 +1,7 @@
 import pytest
 from api.serializers import PostSerializer, PostUpdateSerializer
-from api.models import Post
 from api.tests.factories import PostFactory
+
 
 @pytest.mark.django_db
 class TestPostSerializer:

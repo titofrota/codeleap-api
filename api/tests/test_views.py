@@ -48,7 +48,6 @@ class TestPostViewSet:
         assert "username" in response.data
         assert response.data["username"] == ["This field is required."]
 
-
     def test_valid_update_post(self):
         post = PostFactory()
         data = {
@@ -88,7 +87,6 @@ class TestPostViewSet:
         response = self.client.get("/api/v1/posts/99999/")
 
         assert response.status_code == status.HTTP_404_NOT_FOUND
-
 
     def test_get_all_posts(self):
         PostFactory.create_batch(5)

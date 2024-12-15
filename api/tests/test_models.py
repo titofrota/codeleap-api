@@ -1,5 +1,4 @@
 import pytest
-from django.db.utils import IntegrityError
 from api.models import Post
 from datetime import datetime
 
