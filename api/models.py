@@ -7,9 +7,9 @@ class BaseModel(models.Model):
         abstract = True
 
 class Post(BaseModel):
-    username = models.CharField(max_length=100)
-    title = models.CharField(max_length=100)
-    content = models.TextField()
+    username = models.CharField(max_length=100, blank=False, null=False)
+    title = models.CharField(max_length=100, blank=False, null=False)
+    content = models.TextField(blank=False, null=False)
         
     def __str__(self):
         return self.title
