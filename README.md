@@ -83,3 +83,5 @@ You can visit this URL to explore the API documentation using Swagger UI:
 - **Redoc**: [api/schema/redoc/](https://codeleap-drce.onrender.com/api/schema/redoc/)
 
 The API provides all the necessary endpoints to interact with the social network and test its functionalities.
+
+![image](https://github.com/user-attachments/assets/0a5fb77f-db50-4458-8131-5fef4003949e)
