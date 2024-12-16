@@ -84,9 +84,6 @@ The API provides all the necessary endpoints to interact with the social network
 
 ![image](https://github.com/user-attachments/assets/0a5fb77f-db50-4458-8131-5fef4003949e)
 
-
-Aqui está um texto humanizado que reflete seu processo de implementação, com as informações que você forneceu, incluindo as lições aprendidas no final:
-
 ---
 
 ## 🛠️ Implementation Process
