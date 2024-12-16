@@ -7,10 +7,6 @@
   <strong>Code challenge for CodeLeap</strong>
 </div>
 
-<div align="center">
-  <p>An amazing repository with a spectacular project! 🎉</p>
-</div>
-
 ## 📖 Table of Contents
 
 - [📖 Table of Contents](#-table-of-contents)
